@@ -22,9 +22,12 @@ void Sort(int *a,int left,int right){
 ```
 ## 高级排序 $O(n \log(n))$
 
-### 归并排序
+### 归并排序：平均复杂度$O(n\log{n})$,最坏复杂度$O(n\log{n})$
+
+
 -*合并两个有序列表*
-```$c++
+
+```c++
 void Merge(int *a,int left,int right,int mid){
 //merge a[left,mid] and a[mid+1,right]
     int *L=new int[mid-left+2];
@@ -44,20 +47,19 @@ void Merge(int *a,int left,int right,int mid){
 }
 ```
 -递归过程
-```$cpp
+
+```cpp
 void Sort(int *a,int left,int right){
     if(left>=right)return ;
     int mid=(left+right)/2;
     Sort(a,left,mid);//
     Sort(a,mid+1,right);//
-    //merge
     Merge(a,left,right,mid);
-
 }
 ```
-### 快速排序
+### 快速排序：平均复杂度$O(n\log{n})$,最坏复杂度$O(n^2)$,实际比归并快4-16倍
 -*划分*
-```$c++
+```c++
 int Partition(int *a,int left,int right){
     int i=left;
     for(int j=i;j<=right;j++){
@@ -71,7 +73,7 @@ int Partition(int *a,int left,int right){
 }
 ```
 -递归过程
-```$c++
+```c++
 void Sort(int *a,int left,int right){
    if(left>=right)return ;
    int p=Partition(a,left,right);
@@ -82,7 +84,11 @@ void Sort(int *a,int left,int right){
    Sort(a,p+1,right);
 }
 ```
-# 线性时间排序
+## 线性时间排序
 - 计数排序
-- 去重
+- 桶排序
 
+
+##有序列表去重
+- 有序列表去重
+- 有序列表去重STL `unique()`
