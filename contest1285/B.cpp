@@ -7,8 +7,9 @@ int main() {
     cin >> n;
     vector<int> a(n);
     for (auto &e:a)cin >> e;
-    for (auto i = 0; i < a.size() - 1; i++) {
-        swap(a[i], *min_element(a.begin() + i , a.end()));
+    for (auto p = a.begin(); p != a.end(); ++p) {
+        auto q = min_element(p, a.end());
+        if (p != q)swap(*p, *q);
     }
     for (auto e:a)cout << e << " ";
     cout << endl;
