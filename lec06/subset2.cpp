@@ -8,7 +8,6 @@ int main() //2^4 0000~1111
     for (int i = 0; i < (1 << n); i++) {
         bitset<4> B(i);
         cout << B << endl;
-
     }
     return 0;
 }

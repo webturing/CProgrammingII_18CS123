@@ -2,8 +2,7 @@
 
 using namespace std;
 
-int main() //2^4 0000~1111
-{
+int main() { //2^4 0000~1111
     int A[] = {3, 4, 7, 9}, M = 20;
     int a, b, c, d;
     for (a = 0; a <= 1; a++)

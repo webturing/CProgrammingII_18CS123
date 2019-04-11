@@ -14,8 +14,8 @@ void dfs(int k) {
     if (k == N) {
         int i;
         for (i = 0; i < k; i++)
-            if (used[i]) printf("%d ", a[i]);
-        printf("\n");
+            if (used[i])cout << a[i] << " ";
+        cout << endl;
         return;
     }
     used[k] = 0;
