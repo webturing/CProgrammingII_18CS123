@@ -5,12 +5,16 @@ using namespace std;
 int main() {
     int n;
     cin >> n;
-    vector<int> v(n);
-    for (auto &e:v)cin >> e;
-    sort(v.begin(), v.end(), greater<int>());
-    cout << v[0];
-    for (int i = 1; i < v.size(); i++)
-        cout << " " << v[i];
+    vector<int> a(n);
+    for (auto &e:a)cin >> e;
+    for (int i = 0; i < n - 1; i++) {
+        auto k = max_element(a.begin() + i, a.end());
+        swap(a[i], *k);
+    }
+
+    cout << a[0];
+    for (int i = 1; i < a.size(); i++)
+        cout << " " << a[i];
     cout << endl;
     return 0;
 
