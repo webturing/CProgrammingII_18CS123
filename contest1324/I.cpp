@@ -1,9 +1,7 @@
 #include <bits/stdc++.h>
-
 using namespace std;
 typedef long long LL;
 LL MOD = 1000000007L;
-
 
 inline bool prime(int n) {
     if (n == 2)return true;
