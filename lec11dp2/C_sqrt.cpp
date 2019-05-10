@@ -2,6 +2,7 @@
 
 using namespace std;
 
+//O(sqrt(n))  n可以达到 INT_MAX 2000,000,000
 int main() {
     int n = 1000005;
     //cin>>n;

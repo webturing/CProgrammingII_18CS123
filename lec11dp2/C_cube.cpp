@@ -2,6 +2,7 @@
 
 using namespace std;
 
+//立方算法  1秒只能解决n<=1000
 int main() {
     int n = 10005;
     for (int i = 1; i <= n / 2; i++) {
