@@ -7,7 +7,7 @@ int main() {
     int n = sizeof(a) / sizeof(a[0]);
     int k = 2;
     int pos = lower_bound(a, a + n, k) - a;//log(N)
-    if (pos == n) {
+    if (pos == n || a[pos] != k) {
         cout << "Not found!" << endl;
     } else {
         cout << "First positin is " << pos << endl;

@@ -2,7 +2,7 @@
 
 using namespace std;
 
-//nlogn 1ÃëÄÜ½â¾ön<=10,000,000
+//nlogn 1ÃƒÃ«Ã„ÃœÂ½Ã¢Â¾Ã¶n<=10,000,000
 void print(int *a, int n) {
     for (int i = 0; i < n; i++)cout << a[i] << " ";
     cout << endl;
@@ -10,8 +10,8 @@ void print(int *a, int n) {
 
 typedef long long LL;
 const int MAXN = 2000000 + 10;
-LL a[n + 1] = {0};
-LL b[n + 1] = {0, 1};
+LL a[MAXN] = {0};
+LL b[MAXN] = {0, 1};
 
 int main() {
     int n = 100005;
